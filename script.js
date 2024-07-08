@@ -1,205 +1,253 @@
 //Array innehållandes flera objekt
 let persons = [
-    {
-        name: "Felicia",
-        age: 12
-    },
-    {
-        name: "Pelle",
-        age: 20
-    },
-    {
-        name: "Peter",
-        age: 59
-    },
-    {
-        name: "Anna",
-        age: 32
-    },
-    {
-        name: "Jocke",
-        age: 18
-    },
-    {
-        name: "Ella",
-        age: 3
-    }
-]
-
-
+  {
+    name: "Felicia",
+    age: 12,
+  },
+  {
+    name: "Pelle",
+    age: 20,
+  },
+  {
+    name: "Peter",
+    age: 59,
+  },
+  {
+    name: "Anna",
+    age: 32,
+  },
+  {
+    name: "Jocke",
+    age: 18,
+  },
+  {
+    name: "Ella",
+    age: 3,
+  },
+];
 
 /* 1 */
 /* Gör en array som innehåller 5 st olika frukter av datatypen string. */
-console.log('Uppgift 1');
+console.log("%cUppgift 1", "font-weight:bold;color:green");
+let almostFruits = ["äppel", "päppel", "pirum", "parum", "kråkan"];
+console.log(almostFruits);
 
 /* 2 */
 /* Gör en array som innehåller 3 olika datatyper, ex. string, number, array. */
-console.log('Uppgift 2');
+console.log("%cUppgift 2", "font-weight:bold;color:green");
+let differentTypes = ["en lista", 4, almostFruits];
+console.log(differentTypes);
 
 /* 3 */
 /* let animals = ['cat', 'hamster', 'parrot', 'funky chihuahua'] */
 /* console.log() hur många objekt arrayen ovan innehåller. */
-console.log('Uppgift 3');
+console.log("%cUppgift 3", "font-weight:bold;color:green");
+let animals = ["cat", "hamster", "parrot", "funky chihuahua"];
+//hur många objekt arrayen ovan innehåller.
+console.log(`Arrayen ${animals} innehåller: ${animals.length} objekt`);
 
 /* 4 */
 /* let animals = ['cat', 'hamster', 'parrot', 'funky chihuahua'] */
 /* I arrayen ovan, hämta cat. */
-console.log('Uppgift 4');
+console.log("%cUppgift 4", "font-weight:bold;color:green");
+let cat = animals.shift();
+console.log(cat);
+console.log(`Arrayen ${animals} innehåller: ${animals.length} objekt`);
 
 /* 5 */
 /* let animals = ['cat', 'hamster', 'parrot', 'funky chihuahua'] */
 /* I arrayen ovan, hämta funky chihuahua. */
-console.log('Uppgift 5');
+console.log("%cUppgift 5", "font-weight:bold;color:green");
+animals = ['cat', 'hamster', 'parrot', 'funky chihuahua'];
+let popped = animals.pop();
+console.log(popped);
 
 /* 6 */
 /* let animals = ['cat', 'hamster', 'parrot', 'funky chihuahua'] */
 /* I arrayen ovan, byt ut hamster mot tiger. */
-console.log('Uppgift 6');
+console.log("%cUppgift 6", "font-weight:bold;color:green");
+animals = ['cat', 'hamster', 'parrot', 'funky chihuahua'];
+animals[animals.indexOf('hamster')] = 'tiger';
+console.log(animals);
 
 /* 7 */
-/* let a = [1,2,3]; */
-/* let b = [4,5,6]; */
+let a = [1,2,3]; 
+let b = [4,5,6]; 
 /* Sätt ihop ovanstående arrayer. */
-console.log('Uppgift 7');
+console.log("%cUppgift 7", 'font-weight:bold;color:green');
+let concatenated = a.concat(b);
+console.log(concatenated);
 
 /* 8 */
-/* let a = [1,2,3,7,8,9]; */
-/* let b = [4,5,6]; */
+a = [1,2,3,7,8,9]; 
+b = [4,5,6]; 
 /* Merga in array b på index 3 i array a.. */
-console.log('Uppgift 8');
+console.log("%cUppgift 8", "font-weight:bold;color:hotpink");
+console.log(a);
+console.log(b);
+let toSpliced = a.splice(3,0,b[0],b[1],b[2]); // // Inserts at index 3
+console.log(a);
+// a.splice(3,0,b);
+// a.flat();
+// console.log(a);
+// let merge1 = a.slice(0,2);
+// console.log(merge1);
+// merge1.concat(b);
+// console.log(merge1);
+// merge1.concat(a.slice(-3));
+
+// console.log(merge1);
+// console.log(a);
+
 
 /* 9 */
-/* let arr = ['a', 'b', 'c']; */
+let arr = ['a', 'b', 'c'];
 /* Klona ovanstående array. */
-console.log('Uppgift 9');
+console.log("%cUppgift 9", "font-weight:bold;color:hotpink");
+arrCopy = arr.map((x) => x); // https://www.freecodecamp.org/news/how-to-clone-an-array-in-javascript-1d3183468f6a/
+arr.pop();
+console.log(arr);
+console.log(arrCopy);
 
 /* 10 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+fruits = ['kiwi', 'apple', 'pear'];
 /* Lägg till en frukt i slutet av arrayen ovan. */
-console.log('Uppgift 10');
+console.log("%cUppgift 10", "font-weight:bold;color:green");
+fruits.push('banana');
+console.log(fruits);
 
 /* 11 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+fruits = ['kiwi', 'apple', 'pear'];
 /* Lägg till en frukt i början av arrayen ovan. */
-console.log('Uppgift 11');
+console.log("%cUppgift 11", "font-weight:bold;color:green");
+fruits.unshift('banana');
+console.log(fruits);
 
 /* 12 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+fruits = ['kiwi', 'apple', 'pear'];
 /* I arrayen ovan, ta bort sista frukten i arrayen. */
-console.log('Uppgift 12');
+console.log("%cUppgift 12", "font-weight:bold;color:green");
+fruits.pop();
+console.log(fruits);
 
 /* 13 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+fruits = ['kiwi', 'apple', 'pear'];
 /* I arrayen ovan, ta bort första frukten i arrayen. */
-console.log('Uppgift 13');
+console.log("%cUppgift 13", "font-weight:bold;color:green");
+fruits.shift();
+console.log(fruits);
 
 /* 14 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+fruits = ['kiwi', 'apple', 'pear'];
 /* Sätt in en frukt i arrayen ovan på index 1. */
-console.log('Uppgift 14');
+console.log("%cUppgift 14", "font-weight:bold;color:green");
+fruits.splice(1,0,'a fruit');
+console.log(fruits);
 
 /* 15 */
-/* let fruits = ['kiwi', 'apple', 'pear']; */
+fruits = ['kiwi', 'apple', 'pear'];
 /* Sätt in, tre frukter i arrayen ovan på index 2. */
-console.log('Uppgift 15');
+console.log("%cUppgift 15", "font-weight:bold;color:green");
+fruits.splice(2,0,'a fruit','frukt2','frukt3');
+console.log(fruits);
 
 /* 16 */
 /* let names = ['David', 'Christoffer', 'Johan', 'Maja'] */
 /* I arrayen ovan, ta bort Christoffer och Johan. */
-console.log('Uppgift 16');
+console.log("%cUppgift 16", "font-weight:bold;color:blue");
 
 /* 17 */
 /* let nums = [1,2,3,4,5,6,7,8,9]; */
 /* Spegelvänd på arrayen ovan. */
-console.log('Uppgift 17');
-
+console.log("%cUppgift 17", "font-weight:bold;color:blue");
 /* 18 */
 /* let str = 'Supercalifragilisticexpialidocious'; */
 /* Kika om strängen ovan innehåller bokstaven n. */
-console.log('Uppgift 18');
+console.log("%cUppgift 18", "font-weight:bold;color:blue");
 
 /* 19 */
 /* let str = 'Supercalifragilisticexpialidocious'; */
 /* Kika om strängen ovan innehåller bokstaven x. */
-console.log('Uppgift 19');
+console.log("%cUppgift 19", "font-weight:bold;color:blue");
 
 /* 20 */
 /* let str = 'Supercalifragilisticexpialidocious'; */
 /* I ovanstående sträng, hitta vilket position första förekomsten av p har. */
-console.log('Uppgift 20');
+console.log("%cUppgift 20", "font-weight:bold;color:blue");
+
 
 /* 21 */
 /* let str = 'Supercalifragilisticexpialidocious'; */
 /* I strängen ovan, plocka fram de 5 första tecknena. */
-console.log('Uppgift 21');
+console.log("%cUppgift 21", "font-weight:bold;color:blue");
 
 /* 22 */
 /* let str = 'Supercalifragilisticexpialidocious'; */
 /* I strängen ovan, plocka fram de 7 sista tecknena. */
-console.log('Uppgift 22');
+console.log("%cUppgift 22", "font-weight:bold;color:blue");
 
 /* 23 */
 /* let numArray = [23, 45, 5, 62, 1, 21, 3, 54]; */
 /* I arrayen ovan, filtera fram alla nummer över 5. Tips: Läs dokumentationen för filter() */
-console.log('Uppgift 23');
+console.log("%cUppgift 23", "font-weight:bold;color:blue");
 
 /* 24 */
 /* let numArray = [23, 45, 5, 62, 1, 21, 3, 54]; */
 /* I arrayen ovan, filtera fram alla nummer under 5. Tips: Läs dokumentationen för filter() */
-console.log('Uppgift 24');
+console.log("%cUppgift 24", "font-weight:bold;color:blue");
 
 /* 25 */
 /* Skriv ut alla namn som är 18 år eller över från arrayen längst upp i dokumentet. */
-console.log('Uppgift 25');
+console.log("%cUppgift 25", "font-weight:bold;color:blue");
 
 /* 26 */
 /* Skriv ut alla namn som är under 18 år från arrayen längst upp i dokumentet. */
-console.log('Uppgift 26');
+console.log("%cUppgift 26", "font-weight:bold;color:blue");
 
 /* 27 */
 /* let arr = ['beta', 'alfa', 'gamma']; */
 /* Sortera ovanstående array alfabetisk. Tips: Läs dokumentattionen för sort() */
-console.log('Uppgift 27');
+console.log("%cUppgift 27", "font-weight:bold;color:blue");
 
 /* 28 */
 /* let nums = [1,5,7,9,3,4,2,6,8]; */
 /* Sortera ovanstående array numeriskt. */
-console.log('Uppgift 28');
+console.log("%cUppgift 28", "font-weight:bold;color:blue");
 
 /* 29 */
 /* I person-arrayen längst upp i dokumentet, sortera objekten efter ålder, yngst först. */
-console.log('Uppgift 29');
+console.log("%cUppgift 29", "font-weight:bold;color:blue");
 
 /* 30 */
 /* I person-arrayen längst upp i dokumentet, sortera objekten efter ålder, äldst först. */
-console.log('Uppgift 30');
+console.log("%cUppgift 30", "font-weight:bold;color:blue");
 
 /* 31 */
 /* I person-arrayen längst upp i dokumentet, sortera objekten i bokstavsordning efter deras namn */
-console.log('Uppgift 31');
+console.log("%cUppgift 31", "font-weight:bold;color:blue");
 
 /* 32 */
 /* I person-arrayen längst upp i dokumentet, gör om alla namn till versaler. */
-console.log('Uppgift 32');
+console.log("%cUppgift 32", "font-weight:bold;color:blue");
 
 /* 33 */
 /* I person-arrayen längst upp i dokumentet, spegelvänd alla namn. */
-console.log('Uppgift 33');
+console.log("%cUppgift 33", "font-weight:bold;color:blue");
 
 /* 34 */
 /* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
 /* Loopa ut följande array med en forEach()-loop. console.log() varje ord. */
-console.log('Uppgift 34');
+console.log("%cUppgift 34", "font-weight:bold;color:blue");
 
 /* 35 */
 /* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
 /* Loopa ut följande array med en for of-loop. console.log() varje ord. */
-console.log('Uppgift 35');
+console.log("%cUppgift 35", "font-weight:bold;color:blue");
 
 /* 36 */
 /* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
 /* Loopa ut följande array med en for-loop. console.log() varje ord. */
-console.log('Uppgift 36');
+console.log("%cUppgift 36", "font-weight:bold;color:blue");
 
 /* 37 */
 /* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
@@ -208,5 +256,4 @@ console.log('Uppgift 36');
 /* 1 - päron */
 /* 2 - äpple */
 /* osv... */
-console.log('Uppgift 37');
-
+console.log("%cUppgift 37", "font-weight:bold;color:blue");
