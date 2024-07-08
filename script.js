@@ -304,7 +304,7 @@ function comparePersonsByAgeDecending(a, b) {
 
 /* 31 */
 /* I person-arrayen längst upp i dokumentet, sortera objekten i bokstavsordning efter deras namn */
-console.log("%cUppgift 31", "font-weight:bold;color:red");
+console.log("%cUppgift 31", "font-weight:bold;color:green");
 personsCopy = persons;
 
 personsCopy.sort(comparePersonsByName);
@@ -315,7 +315,14 @@ for (let p = 0; p < personsCopy.length; p++) {
 }
 
 function comparePersonsByName(a, b) {
-  return b.name - a.name;
+  if (a.name < b.name) {
+    return -1;
+  } else if (a.name > b.name) {
+    return 1;
+  } else {
+    return 0;
+  }
+  //return b.name - a.name;
   //return a.name.localecompare(b,"sv");
 }
 // console.log(persons);
@@ -340,13 +347,13 @@ console.log("%cUppgift 33", "font-weight:bold;color:green");
 personsCopy = persons;
 //personsCopy.sort(comparePersonsByName);
 for (let p = 0; p < personsCopy.length; p++) {
-    let personName = String(personsCopy[p].name);
-    //using split, reverse, join since reverse() only works on arrays.
-    let personArray = personName.split('');
-    personArray.reverse();
-    personName = personArray.join('');
-    //console.log(personName);
-    personsCopy[p].name = personName;
+  let personName = String(personsCopy[p].name);
+  //using split, reverse, join since reverse() only works on arrays.
+  let personArray = personName.split("");
+  personArray.reverse();
+  personName = personArray.join("");
+  //console.log(personName);
+  personsCopy[p].name = personName;
 }
 for (let p = 0; p < personsCopy.length; p++) {
   console.log(`${personsCopy[p].name}`);
@@ -359,7 +366,7 @@ for (let p = 0; p < personsCopy.length; p++) {
 // reverseString("hello");
 
 /* 34 */
-fruits = ['apelsin', 'päron', 'äpple', 'kiwi'];
+fruits = ["apelsin", "päron", "äpple", "kiwi"];
 /* Loopa ut följande array med en forEach()-loop. console.log() varje ord. */
 console.log("%cUppgift 34", "font-weight:bold;color:blue");
 fruits.forEach((element) => console.log(element));
@@ -368,25 +375,24 @@ fruits.forEach((element) => console.log(element));
 /* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
 /* Loopa ut följande array med en for of-loop. console.log() varje ord. */
 console.log("%cUppgift 35", "font-weight:bold;color:blue");
-for (afruit of fruits){
-    console.log(afruit);
+for (afruit of fruits) {
+  console.log(afruit);
 }
-    
 
 /* 36 */
 /* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
 /* Loopa ut följande array med en for-loop. console.log() varje ord. */
 console.log("%cUppgift 36", "font-weight:bold;color:blue");
 //alt 1
-for(let i;i<fruits.length;i++){
-    console.log(fruits[i]);
+for (let i; i < fruits.length; i++) {
+  console.log(fruits[i]);
 }
 //alt 2
-for (f in fruits){
-    console.log(f);
+for (f in fruits) {
+  console.log(f);
 }
-for (f in fruits){
-    console.log(fruits[f]);
+for (f in fruits) {
+  console.log(fruits[f]);
 }
 /* 37 */
 /* let fruits = ['apelsin', 'päron', 'äpple', 'kiwi']; */
@@ -397,6 +403,6 @@ for (f in fruits){
 /* osv... */
 console.log("%cUppgift 37", "font-weight:bold;color:blue");
 //alt 2
-for (f in fruits){
-    console.log(`${f} - ${fruits[f]}`);
+for (f in fruits) {
+  console.log(`${f} - ${fruits[f]}`);
 }
